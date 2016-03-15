@@ -93,6 +93,10 @@ tcp for pubsub
 cluster of storage servers communicate via bus
 client picks server based on key
 
+* observe a collection
+
+.code code/fetch.go
+
 * fan in all subscriptions
 
 .code code/fan.go
