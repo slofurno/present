@@ -23,8 +23,11 @@ Steven LoFurno
 * Goals
 
 be fast
+
 easy to share
+
 provide context
+
 push updates
 
 * 
@@ -43,6 +46,7 @@ POST /user
 - no passwords
 
 POST DELETE /follow
+
 POST DELETE PUT /bookmarks
 
 /ws
@@ -52,9 +56,13 @@ POST DELETE PUT /bookmarks
 * Persistence
 
 everything in memory
+
 map[string]*Collection
+
 writes logged + replayed on start 
+
 aggregate user stats
+- search other users by the topics they are interested in
 
 * Problems
 
@@ -63,6 +71,7 @@ doesn't scale
 * Goals
 
 distribute across multiple machines
+
 similiar interface
 
 * Mangos
