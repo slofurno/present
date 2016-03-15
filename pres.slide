@@ -1,0 +1,91 @@
+trying to scale a real-time app
+Steven LoFurno
+
+* wip
+- some small changes
+- delete all the code
+- rewrite js using redux
+- refactor backend into services
+
+
+* Problem?
+-js
+-go
+-elixir
+-elm
+-ruby
+-c
+-c#
+-python
+-java
+-bash
+
+* Goals
+
+be fast
+easy to share
+provide context
+push updates
+
+* 
+.code code/org.sh
+
+* code
+
+.code code/meteor.js
+
+.code code/eventloop.go
+
+* api
+
+POST /user
+- github oauth
+- no passwords
+
+POST DELETE /follow
+POST DELETE PUT /bookmarks
+
+/ws
+- fetch your entire bookmark feed
+- stream changes
+
+* Persistence
+
+everything in memory
+map[string]*Collection
+writes logged + replayed on start 
+aggregate user stats
+
+* Problems
+
+doesn't scale
+
+* Goals
+
+distribute across multiple machines
+similiar interface
+
+* Mangos
+[[ https://github.com/go-mangos/mangos ]]
+
+- pair
+- bus
+- reqrep
+- pubsub
+- survey
+- pipeline
+
+
+* Cluster
+.code code/cluster.sh
+
+http api for get/post
+tcp for pubsub
+cluster of storage servers communicate via bus
+client picks server based on key
+
+* fan in all subscriptions
+
+.code code/fan.go
+
+
